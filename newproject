@@ -1,0 +1,24 @@
+# Pandas 예제문제 풀이
+
+#1. Getting & Knowing Data
+
+[Pandas 주요 keyword 요약]
+
+import pandas as pd #pandas 함수를 pd로 호출
+pd.read_csv('읽어들일CSV파일.CSV', sep='\t') 
+# tap 간격을 구분자로 갖는 csv 데이터를 호출
+# 기본적인 CSV 파일은 쉼표가 데이터 구분자이지만
+# 특별하게 \t,| 등을 구분자로 갖는 경우는 이를 표기해준다. 
+pd.head(5) # 상위 5개 데이터를 호출
+pd.tail(5) # 하위 5개 데이터를 호출
+pd.shape # 데이터 프레임의 행과 열의 갯수를 반환
+   - pd.shape[0] # 행 갯수 데이터를 반환
+   - pd.shape[1] # 열 갯수 데이터를 반환
+pd.columns # 전체 컬럼의 데이터를 출력한다. (보통 컬럼 제목 List)
+   - pd.colums[5] #5번째 컬럼의 이름을 출력함
+   - df.iloc[:,5].dtype # 6번째 칼럼의 데이터 타입을 확인함 
+   # dtype 은 해당 데이터 타입을 보여줌
+   # .iloc은 Integer Location의 약자로 인덱스 값으로 데이터에 접근 
+   # 이 경우 6번째 컬럼의 데이터 전체를 반환. dtype으로 데이터 타입 확인
+df.index # 데이터의 인덱스 구성을 확인
+df.iloc[2,5] # 6번째 칼럼의 3번째 값을 반환
